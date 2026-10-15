@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Future Tires Trading LLC — Premium Tyres & Fitting in Al Quoz, Dubai</title>
 <meta name="description" content="Genuine-brand tyres for cars, 4x4 & supercars in Al Quoz, Dubai. Expert fitting in minutes, wheel alignment & balancing, puncture repair, nitrogen. Rated 3.9★ by 541 drivers. Call +971 4 379 0900." />
-<meta name="theme-color" content="#0e0f12" />
+<meta name="theme-color" content="#061531" />
 <meta property="og:type" content="business.business" />
 <meta property="og:title" content="Future Tires Trading LLC — Premium Tyres in Al Quoz, Dubai" />
 <meta property="og:description" content="Genuine-brand tyres, fitted in minutes. Alignment, balancing, puncture repair & more in Al Quoz, Dubai. 3.9★ · 541 reviews." />
@@ -112,11 +112,11 @@ html[lang="ar"] .eyebrow{letter-spacing:.05em}
 header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent}
 header.scrolled{background:var(--header-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
-.logo{display:flex;align-items:center;gap:11px;font-family:'Anton',sans-serif;font-size:1.35rem;letter-spacing:.04em;text-transform:uppercase;color:var(--text)}
+.logo{display:flex;flex:none;align-items:center;gap:11px;font-family:'Anton',sans-serif;font-size:1.35rem;letter-spacing:.04em;text-transform:uppercase;color:var(--text)}
 .logo .mark{width:38px;height:38px;border-radius:50%;flex:none;background:repeating-conic-gradient(var(--accent-ink) 0deg 12deg,var(--blue) 12deg 24deg);border:3px solid var(--accent);box-shadow:inset 0 0 0 6px var(--bg)}
 .logo span{color:var(--accent-text)}
 .nav-links{display:flex;align-items:center;gap:28px;margin-inline-start:auto}
-.nav-links a{font-size:.94rem;color:var(--muted);transition:color .2s;font-weight:500}
+.nav-links a{font-size:.94rem;white-space:nowrap;color:var(--muted);transition:color .2s;font-weight:500}
 .nav-links a:hover{color:var(--blue-bright)}
 .nav-cta{display:flex;align-items:center;gap:10px}
 .icon-btn{width:46px;height:46px;flex:none;border:1px solid var(--line-strong);border-radius:12px;background:transparent;color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .25s;font-family:inherit}
@@ -200,6 +200,50 @@ html[lang="ar"] .about-photo .fl span{font-family:'Cairo',sans-serif}
 .adv .ic svg{width:22px;height:22px;stroke:var(--accent-text);fill:none;stroke-width:2}
 .adv h4{font-size:1.05rem;letter-spacing:.02em;margin-bottom:3px}
 .adv p{color:var(--muted);font-size:.93rem}
+
+/* ============ SIZE CALCULATOR ============ */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch}
+.calc-in{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:36px}
+.calc-out{background:linear-gradient(160deg,var(--blue) 0%,#0B3A94 100%);color:#fff;border-radius:22px;padding:36px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.calc-out::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 30px,rgba(var(--accent-rgb),.08) 30px 34px);pointer-events:none}
+.calc-out>*{position:relative;z-index:2}
+.calc-step{display:flex;align-items:center;gap:12px;margin:30px 0 14px}
+.calc-step:first-child{margin-top:0}
+.calc-num{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em;color:var(--accent-text);border:1px solid var(--line-strong);border-radius:999px;padding:4px 9px;flex:none}
+.calc-step h3{font-size:1.05rem;letter-spacing:.03em}
+.size-row{display:flex;align-items:flex-end;gap:10px}
+.size-row .field{flex:1;min-width:0}
+.size-row .sep{font-family:'Anton',sans-serif;font-size:1.5rem;color:var(--muted-2);padding-bottom:12px;flex:none}
+.calc .hint{font-size:.85rem;color:var(--muted);margin-top:12px}
+.calc .hint b{color:var(--accent-text);font-family:'JetBrains Mono',monospace}
+.seg{display:inline-flex;border:1px solid var(--line-strong);border-radius:999px;padding:4px;gap:4px;flex-wrap:wrap;max-width:100%}
+.seg button{font-family:inherit;font-size:.9rem;font-weight:600;color:var(--muted);background:transparent;border:0;border-radius:999px;padding:9px 18px;cursor:pointer;transition:background .22s,color .22s;min-height:40px}
+.seg button.on{background:var(--blue);color:#fff}
+.seg button:not(.on):hover{color:var(--text)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chips label{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line-strong);border-radius:999px;padding:9px 15px;font-size:.88rem;color:var(--muted);cursor:pointer;transition:border-color .22s,color .22s,background .22s;user-select:none;min-height:42px}
+.chips input{accent-color:var(--blue);width:15px;height:15px;cursor:pointer;flex:none}
+.chips label.on{border-color:var(--blue);color:var(--text);background:rgba(var(--blue-rgb),.12)}
+.calc-hero .lbl{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+.calc-hero .dia{font-family:'Anton',sans-serif;font-size:clamp(2.6rem,6vw,3.6rem);line-height:1;color:var(--accent);margin-top:8px}
+.calc-hero .dia i{font-style:normal;font-size:.85rem;font-family:'JetBrains Mono',monospace;color:rgba(255,255,255,.7);margin-inline-start:9px;letter-spacing:.04em}
+.alts{margin-top:28px;display:grid;gap:8px}
+.alts .ttl{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:3px}
+.alt{display:flex;align-items:center;gap:12px;flex-wrap:wrap;width:100%;text-align:start;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:13px 16px;cursor:pointer;transition:background .22s,border-color .22s,color .22s;font-family:inherit;color:#fff}
+.alt:hover{background:rgba(255,255,255,.15)}
+.alt.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.alt b{font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:700;letter-spacing:.02em}
+.alt .d{font-family:'JetBrains Mono',monospace;font-size:.76rem;padding:3px 9px;border-radius:999px;background:rgba(0,0,0,.22);flex:none}
+.alt.on .d{background:rgba(0,0,0,.14)}
+.alt .s{font-size:.79rem;opacity:.78;margin-inline-start:auto}
+.alt.flat{display:block;cursor:default;opacity:.85;font-size:.88rem;line-height:1.6}
+.alt.flat:hover{background:rgba(255,255,255,.08)}
+.calc-sum{margin-top:auto;padding-top:26px;font-size:.92rem;color:rgba(255,255,255,.85);line-height:1.75}
+.calc-sum b{color:var(--accent);font-family:'JetBrains Mono',monospace}
+.calc-acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.calc-acts .btn-ghost{color:#fff;border-color:rgba(255,255,255,.4)}
+.calc-acts .btn-ghost:hover{color:var(--accent);border-color:var(--accent)}
+@media(max-width:900px){.calc{grid-template-columns:1fr}.calc-in,.calc-out{padding:28px 22px}}
 
 /* CTA band */
 .cta-band{background:linear-gradient(135deg,var(--blue) 0%,#0B3A94 100%);color:var(--blue-ink);border-radius:22px;padding:64px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;position:relative;overflow:hidden}
@@ -354,6 +398,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:64px 0
       <a href="#top" class="logo"><span class="mark" aria-hidden="true"></span>FUTURE<span>TIRES</span></a>
       <div class="nav-links">
         <a href="#services" data-ar="الخدمات">Services</a>
+        <a href="#size" data-ar="حاسبة المقاس">Calculator</a>
         <a href="#about" data-ar="من نحن">About</a>
         <a href="#reviews" data-ar="التقييمات">Reviews</a>
         <a href="#gallery" data-ar="معرض الصور">Gallery</a>
@@ -482,6 +527,62 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:64px 0
       <div class="svc reveal d2">
         <div class="ph"><span class="num" data-ar="06 — أداء">06 — PERFORMANCE</span><img src="img/at-tire.jpg" alt="4x4 and supercar tyres" loading="lazy" /></div>
         <div class="body"><h3 data-ar="إطارات الدفع الرباعي والسيارات الخارقة">4×4 & Supercar Tyres</h3><p data-ar="أطقم طرق وعرة للصحراء وإطارات أداء عالي للسيارات السريعة — نوفّرها ونركّبها بعناية.">Off-road AT/MT sets for the desert and Y/Z-rated performance rubber for the fast stuff — sourced and fitted with care.</p><span class="tag" data-ar="صحراء · حلبة">DESERT · TRACK</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIZE CALCULATOR -->
+<section id="size">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-ar="حاسبة المقاس">Size calculator</span>
+      <h2 data-ar="اعرف مقاسك قبل أن تتصل">Know your size before you call</h2>
+      <p data-ar="اقرأ الأرقام الثلاثة من جانب الإطار. سنُظهر لك ما يناسب سيارتك أيضاً، وكم سينحرف عدّاد السرعة — ثم أرسل المواصفات كاملة إلى المحل بضغطة واحدة.">Read the three numbers off your sidewall. We'll show what else fits your car, how far off your speedo would read — then send the whole spec to the shop in one tap.</p>
+    </div>
+
+    <div class="calc reveal">
+      <div class="calc-in">
+        <div class="calc-step"><span class="calc-num">01</span><h3 data-ar="مقاسك الحالي">Your current size</h3></div>
+        <div class="size-row">
+          <div class="field"><label for="cw" data-ar="العرض">Width</label><select id="cw" autocomplete="off"></select></div>
+          <span class="sep">/</span>
+          <div class="field"><label for="cp" data-ar="النسبة">Profile</label><select id="cp" autocomplete="off"></select></div>
+          <div class="field"><label for="cr" data-ar="الجنط">Rim</label><select id="cr" autocomplete="off"></select></div>
+        </div>
+        <p class="hint" data-ar="مطبوع على جانب الإطار، مثل <b>225/45 R17</b>">It's printed on the tyre wall, like <b>225/45 R17</b></p>
+
+        <div class="calc-step"><span class="calc-num">02</span><h3 data-ar="ماذا تريد">What are you after</h3></div>
+        <div class="seg" id="goal" role="group">
+          <button type="button" data-g="same" class="on" data-ar="نفس المقاس">Same size</button>
+          <button type="button" data-g="up" data-ar="جنط أكبر">Bigger rim</button>
+        </div>
+
+        <div class="calc-step"><span class="calc-num">03</span><h3 data-ar="كم إطاراً، وماذا أيضاً">How many, and what else</h3></div>
+        <div class="seg" id="qty" role="group">
+          <button type="button" data-q="1">1</button>
+          <button type="button" data-q="2">2</button>
+          <button type="button" data-q="4" class="on">4</button>
+        </div>
+        <div class="chips" id="extras">
+          <label class="on"><input type="checkbox" checked autocomplete="off" data-k="align" /><span data-ar="ضبط الزوايا والموازنة">Alignment &amp; balancing</span></label>
+          <label><input type="checkbox" autocomplete="off" data-k="n2" /><span data-ar="تعبئة النيتروجين">Nitrogen filling</span></label>
+          <label><input type="checkbox" autocomplete="off" data-k="punct" /><span data-ar="إصلاح الثقوب">Puncture repair</span></label>
+          <label><input type="checkbox" autocomplete="off" data-k="dispose" /><span data-ar="التخلّص من الإطارات القديمة">Dispose of old tyres</span></label>
+        </div>
+      </div>
+
+      <div class="calc-out">
+        <div class="calc-hero">
+          <span class="lbl" data-ar="القطر الكلي">Overall diameter</span>
+          <div class="dia"><span id="diaMm">0</span><i id="diaIn">0"</i></div>
+        </div>
+        <div class="alts" id="alts"></div>
+        <div class="calc-sum" id="calcSum"></div>
+        <div class="calc-acts">
+          <button type="button" class="btn btn-primary" id="calcSend" data-ar="أرسل هذا إلى المحل">Send this to the shop</button>
+          <a href="tel:+97143790900" class="btn btn-ghost" data-ar="اتصل بالمحل">Call the shop</a>
+        </div>
       </div>
     </div>
   </div>
@@ -700,7 +801,7 @@ nav.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', ()
 const themeBtn = document.getElementById('themeBtn');
 function setTheme(t){
   document.documentElement.setAttribute('data-theme', t);
-  document.querySelector('meta[name="theme-color"]').setAttribute('content', t==='light' ? '#f4f6f8' : '#0e0f12');
+  document.querySelector('meta[name="theme-color"]').setAttribute('content', t==='light' ? '#F1F5FC' : '#061531');
   try{ localStorage.setItem('ft-theme', t); }catch(e){}
 }
 themeBtn.addEventListener('click', () => {
@@ -777,6 +878,144 @@ form.addEventListener('submit', (e) => {
   note.style.color = 'var(--wa)';
   form.reset();
 });
+
+/* ---- TYRE SIZE CALCULATOR ---- */
+(function(){
+  const WIDTHS=[135,145,155,165,175,185,195,205,215,225,235,245,255,265,275,285,295,305,315,325,335,345,355];
+  const PROFILES=[25,30,35,40,45,50,55,60,65,70,75,80];
+  const RIMS=[13,14,15,16,17,18,19,20,21,22,23,24];
+  const SAFE=3; /* ±3% overall diameter — past that the speedo, ABS and traction control start reading wrong */
+
+  const $=id=>document.getElementById(id);
+  const cw=$('cw'),cp=$('cp'),cr=$('cr');
+  if(!cw) return;
+  const fill=(el,arr,def,pre,suf)=>{el.innerHTML=arr.map(v=>'<option value="'+v+'"'+(v===def?' selected':'')+'>'+(pre||'')+v+(suf||'')+'</option>').join('');};
+  fill(cw,WIDTHS,225); fill(cp,PROFILES,45,'','%'); fill(cr,RIMS,17,'R');
+
+  const dia=(w,p,r)=> r*25.4 + 2*(w*p/100);
+  const label=x=> x.w+'/'+x.p+' R'+x.r;
+  const isAr=()=>document.documentElement.getAttribute('lang')==='ar';
+
+  let goal='same', qty=4, pick=0, rows=[];
+
+  function build(){
+    const w=+cw.value, p=+cp.value, r=+cr.value, d0=dia(w,p,r);
+    const out=[{w:w,p:p,r:r,d:d0,delta:0,stock:true}];
+    const rims = goal==='up' ? [r+1,r+2].filter(x=>x<=24) : [r];
+    const perRim = goal==='up' ? 2 : 3;
+    rims.forEach(function(rim){
+      const cand=[];
+      WIDTHS.forEach(function(ww){
+        if(ww < w-10 || ww > w+30) return;
+        PROFILES.forEach(function(pp){
+          if(ww===w && pp===p && rim===r) return;
+          const d=dia(ww,pp,rim), delta=(d-d0)/d0*100;
+          if(Math.abs(delta)<=SAFE) cand.push({w:ww,p:pp,r:rim,d:d,delta:delta});
+        });
+      });
+      cand.sort((a,b)=>Math.abs(a.delta)-Math.abs(b.delta));
+      out.push.apply(out, cand.slice(0,perRim));
+    });
+    return out;
+  }
+
+  function row(x,i,ar){
+    const sign = x.delta>0?'+':'';
+    const note = x.stock
+      ? (ar?'المرجع':'reference')
+      : (ar? ('العدّاد 100 ← '+(100*x.d/rows[0].d).toFixed(1)+' كم/س فعلياً')
+           : ('speedo 100 → really '+(100*x.d/rows[0].d).toFixed(1)+' km/h'));
+    return '<button type="button" class="alt'+(i===pick?' on':'')+'" data-i="'+i+'">'+
+           '<b>'+label(x)+'</b>'+
+           '<span class="d">'+sign+x.delta.toFixed(1)+'%</span>'+
+           '<span class="s">'+note+'</span></button>';
+  }
+
+  function chosenExtras(){
+    return Array.prototype.slice.call(document.querySelectorAll('#extras input:checked'))
+      .map(i=>i.parentElement.querySelector('span').textContent.trim());
+  }
+
+  function render(){
+    const ar=isAr();
+    rows=build();
+    if(pick>=rows.length) pick=0;
+    const sel=rows[pick];
+    $('diaMm').textContent=Math.round(sel.d);
+    $('diaIn').textContent=(sel.d/25.4).toFixed(1)+'"';
+
+    const heading = goal==='up'
+      ? (ar?'جنط أكبر يحافظ على القطر':'Bigger rims that keep your diameter')
+      : (ar?'بدائل بنفس القطر':'Same-diameter alternatives');
+    let html='<span class="ttl">'+(ar?'مقاسك الحالي':'Your current size')+'</span>'+row(rows[0],0,ar);
+    html+='<span class="ttl" style="margin-top:14px">'+heading+'</span>';
+    const alt=rows.slice(1);
+    html += alt.length
+      ? alt.map((x,i)=>row(x,i+1,ar)).join('')
+      : '<div class="alt flat">'+(ar?'لا شيء آخر يقع ضمن 3٪ من قطرك الحالي — مقاسك هو الصحيح.':'Nothing else sits within 3% of your diameter — your current size is the right one.')+'</div>';
+    $('alts').innerHTML=html;
+
+    const ex=chosenExtras(), sign=sel.delta>0?'+':'';
+    const diff = sel.stock ? '' : (ar? (' · '+sign+sel.delta.toFixed(1)+'٪ عن المقاس الأصلي') : (' · '+sign+sel.delta.toFixed(1)+'% vs stock'));
+    $('calcSum').innerHTML = '<b>'+qty+' ×</b> '+label(sel)+diff+'<br>'+
+      (ex.length ? (ar?'إضافةً إلى: ':'Plus: ')+ex.join(ar?'، ':', ') : (ar?'بدون خدمات إضافية':'No extra services'));
+  }
+
+  function spec(){
+    const sel=rows[pick], cur=rows[0], ex=chosenExtras();
+    const sign=sel.delta>0?'+':'';
+    return 'Future Tires — size enquiry\n'+
+      'Current size: '+label(cur)+'\n'+
+      'Wanted: '+label(sel)+(sel.stock?'':' ('+sign+sel.delta.toFixed(1)+'% vs stock)')+'\n'+
+      'Quantity: '+qty+'\n'+
+      'Also needed: '+(ex.length?ex.join(', '):'—');
+  }
+
+  [cw,cp,cr].forEach(el=>el.addEventListener('change',function(){pick=0;render();}));
+  $('goal').addEventListener('click',function(e){
+    const b=e.target.closest('button[data-g]'); if(!b) return;
+    goal=b.dataset.g; pick=0;
+    this.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
+    render();
+  });
+  $('qty').addEventListener('click',function(e){
+    const b=e.target.closest('button[data-q]'); if(!b) return;
+    qty=+b.dataset.q;
+    this.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
+    render();
+  });
+  $('extras').addEventListener('change',function(e){
+    const l=e.target.closest('label'); if(l) l.classList.toggle('on',e.target.checked);
+    render();
+  });
+  $('alts').addEventListener('click',function(e){
+    const b=e.target.closest('.alt[data-i]'); if(!b) return;
+    pick=+b.dataset.i; render();
+  });
+  $('calcSend').addEventListener('click',function(){
+    const txt=spec();
+    if(WA_NUMBER){ window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(txt),'_blank'); return; }
+    const msg=$('msg'); if(msg) msg.value=txt;
+    $('contact').scrollIntoView({behavior:'smooth',block:'start'});
+    const n=$('name'); if(n) setTimeout(()=>n.focus({preventScroll:true}),700);
+    const note=$('formNote');
+    if(note) note.innerHTML = isAr()
+      ? 'نقلنا مواصفات المقاس إلى النموذج. أضف اسمك ورقمك وسنرد بالسعر والتوفّر.'
+      : 'Your size spec is in the form. Add your name and number and we\'ll come back with price &amp; availability.';
+  });
+  /* language toggle runs first (registered earlier), so this redraws the calculator after it */
+  langBtn.addEventListener('click',()=>setTimeout(render,0));
+
+  /* a reload can restore previous control values, so take the state from the DOM, not from the defaults */
+  function sync(){
+    const g=document.querySelector('#goal button.on'); if(g) goal=g.dataset.g;
+    const q=document.querySelector('#qty button.on'); if(q) qty=+q.dataset.q;
+    document.querySelectorAll('#extras input').forEach(i=>i.parentElement.classList.toggle('on',i.checked));
+    render();
+  }
+  sync();
+  window.addEventListener('pageshow',sync);
+})();
 </script>
 </body>
 </html>
