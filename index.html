@@ -5,12 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Future Tyres Trading — Premium Tyres & Fitting in Ras Al Khor, Dubai</title>
 <meta name="description" content="Genuine-brand tyres for cars, 4x4 & supercars in Ras Al Khor, Dubai. Expert fitting in minutes, wheel alignment & balancing, puncture repair, nitrogen. Rated 4.2★ by 2,522 drivers. Call +971 4 320 7090." />
-<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92"><circle cx="46" cy="46" r="45" fill="%230B2A5E"/><g fill="none" stroke="%23F2F6FB" stroke-width="5" stroke-linecap="round"><circle cx="46" cy="46" r="29"/><line x1="46" y1="46" x2="75.0" y2="46.0"/><line x1="46" y1="46" x2="66.5" y2="66.5"/><line x1="46" y1="46" x2="46.0" y2="75.0"/><line x1="46" y1="46" x2="25.5" y2="66.5"/><line x1="46" y1="46" x2="17.0" y2="46.0"/><line x1="46" y1="46" x2="25.5" y2="25.5"/><line x1="46" y1="46" x2="46.0" y2="17.0"/><line x1="46" y1="46" x2="66.5" y2="25.5"/></g><circle cx="46" cy="46" r="9" fill="%23F2F6FB"/></svg>' />
+<link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="img/logo/apple-touch-icon.png" />
 <meta name="theme-color" content="#061531" />
 <meta property="og:type" content="business.business" />
 <meta property="og:title" content="Future Tyres Trading — Premium Tyres in Ras Al Khor, Dubai" />
 <meta property="og:description" content="Genuine-brand tyres, fitted in minutes. Alignment, balancing, puncture repair & more in Ras Al Khor, Dubai. 4.2★ · 2,522 reviews." />
-<meta property="og:image" content="img/hero-fitting.jpg" />
+<meta property="og:image" content="img/logo/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta property="og:locale" content="en_AE" />
 <meta property="og:site_name" content="Future Tyres Trading" />
 
@@ -113,10 +116,18 @@ html[lang="ar"] .eyebrow{letter-spacing:.05em}
 header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent}
 header.scrolled{background:var(--header-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
-.logo{display:flex;flex:none;align-items:center;gap:11px;font-family:'Anton',sans-serif;font-size:1.35rem;letter-spacing:.04em;text-transform:uppercase;color:var(--text)}
-.logo .mark{width:56px;height:24px;flex:none;overflow:visible}
-.logo span{color:var(--accent-text)}
-.nav-links{display:flex;align-items:center;gap:28px;margin-inline-start:auto}
+.logo{display:flex;flex:none;align-items:center;gap:10px;margin-inline-end:4px;font-family:'Anton',sans-serif;font-size:.92rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text)}
+.logo .mark{height:40px;width:auto;flex:none}
+.logo .wm{padding-top:2px;font-size:.72rem;letter-spacing:.2em;color:var(--muted);font-weight:400}
+/* the emblem is chrome artwork built for a dark ground — on the light theme it needs its own plate */
+[data-theme="light"] .logo{background:#212354;border-radius:12px;padding:6px 14px 6px 8px;color:#fff}
+.logo-full{padding:0;background:none}
+.logo-full img{height:72px;width:auto}
+[data-theme="light"] .logo-full{background:#212354;border-radius:16px;padding:14px 20px}
+/* the supporting line is decorative — it goes first when the bar runs out of room */
+@media(max-width:1300px){.logo .wm{display:none}.logo{margin-inline-end:8px}}
+@media(max-width:560px){.logo .mark{height:34px}}
+.nav-links{display:flex;align-items:center;gap:22px;margin-inline-start:auto}
 .nav-links a{font-size:.94rem;white-space:nowrap;color:var(--muted);transition:color .2s;font-weight:500}
 .nav-links a:hover{color:var(--blue-bright)}
 .nav-cta{display:flex;align-items:center;gap:10px}
@@ -129,6 +140,7 @@ header.scrolled{background:var(--header-bg);backdrop-filter:blur(14px);border-bo
 .nav-toggle svg{width:22px;height:22px;stroke:currentColor}
 /* header over hero (not scrolled) → light on photo */
 header:not(.scrolled) .logo,header:not(.scrolled) .nav-toggle{color:#f5f6f8}
+header:not(.scrolled) .logo .wm{color:rgba(245,246,248,.78)}
 header:not(.scrolled) .nav-links a{color:rgba(245,246,248,.82)}
 header:not(.scrolled) .icon-btn,header:not(.scrolled) .btn-ghost{color:#f5f6f8;border-color:rgba(245,246,248,.32)}
 header:not(.scrolled) .icon-btn:hover,header:not(.scrolled) .btn-ghost:hover{color:var(--accent);border-color:var(--accent)}
@@ -406,32 +418,14 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:64px 0
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-  <linearGradient id="ftSilver" x1="0" y1="0" x2=".15" y2="1">
-    <stop offset="0" stop-color="#FFFFFF"/><stop offset=".38" stop-color="#E6ECF4"/>
-    <stop offset=".62" stop-color="#A9B5C8"/><stop offset="1" stop-color="#EDF1F7"/>
-  </linearGradient>
-  <linearGradient id="ftBlue" x1=".2" y1="0" x2=".8" y2="1">
-    <stop offset="0" stop-color="#2A8FD4"/><stop offset=".55" stop-color="#15559E"/>
-    <stop offset="1" stop-color="#0B2A5E"/>
-  </linearGradient>
-  <g id="ftWing" fill="url(#ftSilver)" stroke="#55637C" stroke-width="1.6" stroke-linejoin="round"><path d="M104.0,22.2 Q142.0,9.3 180.0,12.0 Q142.0,24.3 104.0,37.8 Z"/><path d="M107.0,32.8 Q139.5,21.7 172.0,25.0 Q139.5,35.5 107.0,47.2 Z"/><path d="M110.0,42.7 Q135.5,34.5 161.0,39.0 Q135.5,46.6 110.0,55.3 Z"/><path d="M113.0,51.8 Q130.5,46.7 148.0,52.0 Q130.5,56.7 113.0,62.2 Z"/><path d="M116.0,59.0 Q125.5,56.0 135.0,61.0 Q125.5,63.7 116.0,67.0 Z"/></g>
-  <symbol id="ftLogo" viewBox="0 0 200 84">
-    <use href="#ftWing"/><use href="#ftWing" transform="translate(200,0) scale(-1,1)"/>
-    <circle cx="100" cy="46" r="25" fill="url(#ftBlue)" stroke="#EDF1F7" stroke-width="3"/>
-    <g fill="none" stroke="#F2F6FB" stroke-width="2.6" stroke-linecap="round">
-      <circle cx="100" cy="46" r="15.5"/><line x1="100" y1="46" x2="115.50" y2="46.00"/><line x1="100" y1="46" x2="110.96" y2="56.96"/><line x1="100" y1="46" x2="100.00" y2="61.50"/><line x1="100" y1="46" x2="89.04" y2="56.96"/><line x1="100" y1="46" x2="84.50" y2="46.00"/><line x1="100" y1="46" x2="89.04" y2="35.04"/><line x1="100" y1="46" x2="100.00" y2="30.50"/><line x1="100" y1="46" x2="110.96" y2="35.04"/>
-    </g>
-    <circle cx="100" cy="46" r="4.6" fill="#F2F6FB"/>
-  </symbol>
-</defs></svg>
+
 
 
 <!-- HEADER -->
 <header id="header">
   <div class="wrap">
     <nav class="nav" id="nav">
-      <a href="#top" class="logo"><svg class="mark" aria-hidden="true"><use href="#ftLogo"/></svg>FUTURE<span>TYRES</span></a>
+      <a href="#top" class="logo" aria-label="Future Tyres Trading"><img class="mark" src="img/logo/emblem.webp" width="275" height="96" alt="Future Tyres Trading" decoding="async" /><span class="wm" data-ar="لتجارة الإطارات">Tyres Trading</span></a>
       <div class="nav-links">
         <a href="#services" data-ar="الخدمات">Services</a>
         <a href="#size" data-ar="حاسبة المقاس">Calculator</a>
@@ -797,7 +791,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:64px 0
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-col">
-        <a href="#top" class="logo"><svg class="mark" aria-hidden="true"><use href="#ftLogo"/></svg>FUTURE<span style="color:var(--accent-text)">TYRES</span></a>
+        <a href="#top" class="logo logo-full" aria-label="Future Tyres Trading"><img src="img/logo/lockup.webp" width="480" height="256" alt="Future Tyres Trading — المستقبل لتجارة الإطارات" loading="lazy" decoding="async" /></a>
         <p data-ar="إطارات فاخرة وتركيب احترافي ونصائح صادقة في رأس الخور، دبي. نُبقي سيارات المدينة ممسكة بالطريق.">Premium tyres, expert fitting and honest advice in Ras Al Khor, Dubai. Keeping the city's cars gripped to the road.</p>
         <div class="socials">
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.8s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2Zm0 4.9a4.9 4.9 0 1 0 0 9.8 4.9 4.9 0 0 0 0-9.8Zm0 8a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2Zm6.3-8.2a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0Z"/></svg></a>
